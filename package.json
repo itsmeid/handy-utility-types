@@ -1,0 +1,61 @@
+{
+	"name": "@itsmeid/handy-utility-types",
+	"description": "Unlock the power of TypeScript with a collection of handy utility types.",
+	"version": "1.0.0",
+	"author": "itsmeid",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itsmeid/handy-utility-types.git"
+	},
+	"homepage": "https://github.com/itsmeid/handy-utility-types#readme",
+	"bugs": {
+		"url": "https://github.com/itsmeid/handy-utility-types/issues"
+	},
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"keywords": [
+		"ts",
+		"typescript",
+		"type-safety",
+		"utility",
+		"utility-types",
+		"typescript utility types",
+		"development"
+	],
+	"types": "./dist/index.d.ts",
+	"files": ["dist"],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts"
+		},
+		"./reference": {
+			"types": "./dist/lib/reference/index.ts"
+		},
+		"./reference/*": {
+			"types": "./dist/lib/reference/*.d.ts"
+		}
+	},
+	"scripts": {
+		"reinstall": "rm -rf node_modules && bun install",
+		"format": "bunx biome format",
+		"lint": "bunx biome lint",
+		"check": "biome check",
+		"full-check": "bun check && bun test",
+		"test": "bun test",
+		"build": "rm -rf dist && bunx tsc -p tsconfig.dist.json",
+		"dist": "bun run build && cp -R lib/reference dist/lib/",
+		"docs": "bunx typedoc && bun ./script/finishing-docs.ts",
+		"prepare": "bunx husky",
+		"prepublishOnly": "bun docs && bun full-check && bun dist"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.3",
+		"@types/bun": "latest",
+		"husky": "^9.1.6",
+		"typedoc": "^0.26.8",
+		"typedoc-plugin-markdown": "^4.2.9",
+		"typescript": "^5.5.3"
+	}
+}
