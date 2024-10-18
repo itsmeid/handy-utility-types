@@ -53,4 +53,4 @@ type IsNotEqualExample = IsNotEqual<string, number>; // true
 
 ## Defined in
 
-utility-types.ts:189
+[utility-types.ts:189](https://github.com/itsmeid/handy-utility-types/blob/361f33ed663ecb70e7a5632aeff8b3063307bcd0/lib/modular/utility-types.ts#L189)

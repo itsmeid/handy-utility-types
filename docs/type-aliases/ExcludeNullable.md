@@ -37,4 +37,4 @@ type NonNullableType = ExcludeNullable<string | null | undefined>; // string
 
 ## Defined in
 
-utility-types.ts:355
+[utility-types.ts:355](https://github.com/itsmeid/handy-utility-types/blob/361f33ed663ecb70e7a5632aeff8b3063307bcd0/lib/modular/utility-types.ts#L355)

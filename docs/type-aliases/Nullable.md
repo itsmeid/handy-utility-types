@@ -37,4 +37,4 @@ const example: Nullable<string> = null; // valid
 
 ## Defined in
 
-utility-types.ts:44
+[utility-types.ts:44](https://github.com/itsmeid/handy-utility-types/blob/361f33ed663ecb70e7a5632aeff8b3063307bcd0/lib/modular/utility-types.ts#L44)
